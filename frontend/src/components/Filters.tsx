@@ -26,12 +26,14 @@ const Filters = () => {
     fetchFilters();
   }, []);
 
-  const handleClinicChange = (event) => {
+  const handleClinicChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const clinic = event.target.value;
     updateFilters({ ...filters, clinic });
   };
 
-  const handleProviderChange = (event) => {
+  const handleProviderChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
     const provider = event.target.value;
     updateFilters({ ...filters, provider });
   };
